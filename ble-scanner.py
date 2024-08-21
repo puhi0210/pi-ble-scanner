@@ -1,5 +1,8 @@
 from bluepy.btle import Scanner, DefaultDelegate
 
+# Maximalni RSSI za določanje bližine neprave
+maxRSSI = 70
+
 class ScanDelegate(DefaultDelegate):
     def __init__(self):
         DefaultDelegate.__init__(self)
@@ -20,7 +23,7 @@ print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 print("Skeniranje končano.")
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 print("Vse naprave:\n")
-'''
+
 for dev in devices:
     print("Naprava %s (%s), RSSI=%d dB" % (dev.addr, dev.addrType, dev.rssi))
     for (adtype, desc, value) in dev.getScanData():
@@ -37,6 +40,14 @@ for dev in devices:
             if "Local Name" in desc:
                 print("  %s = %s" % (desc, value))
         print("\n")
-'''
+
+
+
+devicesNearBy = []
+
+for dev in devices:
+    if dev.rssi <= maxRSSI:
+        devicesNearBy.append(dev)
 
 print("Število zaznanih naprav:", len(devices))
+print("Število naprav v bližini:", len(devicesNearBy))
