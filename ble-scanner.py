@@ -24,3 +24,12 @@ for dev in devices:
     for (adtype, desc, value) in dev.getScanData():
         print("  %s = %s" % (desc, value))
     print("\n")
+
+print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+
+for dev in devices:
+    if dev.getScanData.desc() == Complete Local Name && value:
+        print("Naprava %s (%s), RSSI=%d dB" % (dev.addr, dev.addrType, dev.rssi))
+        for (adtype, desc, value) in dev.getScanData():
+            print("  %s = %s" % (desc, value))
+        print("\n")
