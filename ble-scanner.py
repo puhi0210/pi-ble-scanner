@@ -50,4 +50,4 @@ for dev in devices:
         devicesNearBy.append(dev)
 
 print("Število zaznanih naprav:", len(devices))
-print("Število naprav v bližini (RSSI večji od %s dB): %s", (minRSSI,len(devicesNearBy)))
+print("Število naprav v bližini (RSSI večji od %s dB): %s" % (minRSSI, len(devicesNearBy)))
