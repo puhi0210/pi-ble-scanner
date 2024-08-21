@@ -39,4 +39,4 @@ for dev in devices:
         print("\n")
 '''
 
-print("Število zaznanih naprav:", devices.length())
+print("Število zaznanih naprav:", len(devices))
