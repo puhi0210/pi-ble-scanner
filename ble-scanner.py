@@ -31,5 +31,6 @@ for dev in devices:
     if any("Local Name" in desc for (_, desc, _) in dev.getScanData()):
         print("Naprava %s (%s), RSSI=%d dB" % (dev.addr, dev.addrType, dev.rssi))
         for (adtype, desc, value) in dev.getScanData():
-            print("  %s = %s" % (desc, value))
+            if "Local Name" in desc:
+                print("  %s = %s" % (desc, value))
         print("\n")
