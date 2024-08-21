@@ -49,5 +49,5 @@ for dev in devices:
     if dev.rssi >= minRSSI:
         devicesNearBy.append(dev)
 
-print("Število zaznanih naprav:", len(devices))
-print("Število naprav v bližini (RSSI večji od %s dB): %s" % (minRSSI, len(devicesNearBy)))
+print("Število zaznanih naprav:", len(devices), "\n")
+print("Število naprav v bližini (RSSI večji od %s dB): %s\n" % (minRSSI, len(devicesNearBy)))
