@@ -15,6 +15,7 @@ scanner = Scanner().withDelegate(ScanDelegate())
 
 # Scan for devices for 10 seconds
 devices = scanner.scan(10.0)
+
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 print("Skeniranje končano.")
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
@@ -38,6 +39,4 @@ for dev in devices:
         print("\n")
 '''
 
-for dev in devices:
-    print(dev.addr)
- 
+print("Število zaznanih naprav:", devices.length())
