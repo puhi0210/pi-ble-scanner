@@ -1,7 +1,7 @@
 from bluepy.btle import Scanner, DefaultDelegate
 
 # Maximalni RSSI za določanje bližine neprave
-maxRSSI = 70
+minRSSI = -70
 
 class ScanDelegate(DefaultDelegate):
     def __init__(self):
@@ -46,7 +46,7 @@ for dev in devices:
 devicesNearBy = []
 
 for dev in devices:
-    if dev.rssi <= maxRSSI:
+    if dev.rssi >= minRSSI:
         devicesNearBy.append(dev)
 
 print("Število zaznanih naprav:", len(devices))
