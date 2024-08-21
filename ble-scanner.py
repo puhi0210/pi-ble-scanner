@@ -18,6 +18,7 @@ devices = scanner.scan(10.0)
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 print("Skeniranje končano.")
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+print("Vse naprave:\n")
 
 for dev in devices:
     print("Naprava %s (%s), RSSI=%d dB" % (dev.addr, dev.addrType, dev.rssi))
@@ -26,6 +27,7 @@ for dev in devices:
     print("\n")
 
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+print("Naprave z lokalnim imenom:\n")
 
 for dev in devices:
     if any("Local Name" in desc for (_, desc, _) in dev.getScanData()):
