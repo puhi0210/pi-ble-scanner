@@ -26,4 +26,8 @@ $ sudo apt-get install python3-pip libglib2.0-dev
 $ sudo pip3 install bluepy
 ```
 
+Nato poženemo program:
+```bash
+$ sudo python3 ble-scanner.pi
+```
 
