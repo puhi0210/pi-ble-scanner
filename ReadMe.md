@@ -13,7 +13,7 @@ Za skeniranje naprav bluetooth je v okolju VirtualBox potrebno dodati pravilo za
 
 ## Postavitev po korakih <a name=steps></a>
 V terminalu najprej namestimo orodje pip.
-'''bash
+```bash
 $ sudo apt-get install python3-pip
 $ sudo pip3 install bluepy
-'''
+```
