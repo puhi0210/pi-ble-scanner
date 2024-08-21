@@ -40,3 +40,4 @@ for dev in devices:
 
 for dev in devices:
     print(dev)
+ 
