@@ -9,7 +9,7 @@ Projekt skeniranja naprav BLE z mikroračunanikom Raspberry Pi. Uporabil sem vir
 ## Virtualizacija Raspbian OS <a name=VM></a>
 Za postavitev virtualne naprave sem sledil video navodilom na povezavi: https://youtu.be/aUnvG3DFjBM
 
-Za skeniranje naprav bluetooth je v okolju VirtualBox potrebno dodati pravilo za naoravo USB za vmesnik Bluetooth (najdemo ga v Device manager-ju na gostujočem računalniku Windows)
+Za skeniranje naprav bluetooth je v okolju VirtualBox potrebno dodati pravilo za napravo USB za vmesnik Bluetooth (najdemo ga v Device manager-ju na gostujočem računalniku Windows). Na gostujočem OS je dobro tudi izključiti Bluetooth.
 
 ## Postavitev po korakih <a name=steps></a>
 V terminalu Raspbery Pi-ja najprej kloniramo ta repozitorij:
