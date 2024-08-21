@@ -37,4 +37,6 @@ for dev in devices:
                 print("  %s = %s" % (desc, value))
         print("\n")
 '''
-print(devices)
+
+for dev in devices:
+    print(dev)
