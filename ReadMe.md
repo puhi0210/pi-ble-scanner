@@ -4,6 +4,7 @@ Projekt skeniranja naprav BLE z mikroračunanikom Raspberry Pi. Uporabil sem vir
 ## Kazalo
 - [Virtualizacija Raspbian OS](#VM)
 - [Postavitev po korakih](#steps)
+- [Viri](#sources)
 
 
 ## Virtualizacija Raspbian OS <a name=VM></a>
@@ -31,3 +32,7 @@ Nato poženemo program:
 $ sudo python3 ble-scanner.pi
 ```
 
+
+## Viri <a name=sources></a>
+- Virtualizacija Raspbian v okolju VirtualBox: https://youtu.be/aUnvG3DFjBM
+- Uporaba protokola MQTT s python knjižnico Pacho-MQTT in Mosquito MQTT brokerjem: https://medium.com/@potekh.anastasia/a-beginners-guide-to-mqtt-understanding-mqtt-mosquitto-broker-and-paho-python-mqtt-client-990822274923
