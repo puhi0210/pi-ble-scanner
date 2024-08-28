@@ -10,6 +10,9 @@ broker_address: str = os.getenv('BROKER_ADDR')
 broker_port: int = int(os.getenv('BROKER_PORT'))
 broker_keepalive: int = int(os.getenv('BROKER_KA'))
 
+print(f"Broker Address: {broker_address}")
+
+'''
 client = paho.Client()
 
 if client.connect(broker_address, broker_port, broker_keepalive) != 0:
@@ -17,4 +20,4 @@ if client.connect(broker_address, broker_port, broker_keepalive) != 0:
     sys.exit(1)
 
 client.publish("puhi0210/test_topic", "Hi, paho mqtt client works fine!", 0)
-client.disconnect()
+client.disconnect()'''
