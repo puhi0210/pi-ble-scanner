@@ -25,11 +25,11 @@ $ cp template.env .env
 ```
 
 
-Namestimo orodje pip, libglib2.0-dev in bluepy:
+Namestimo orodje pip, libglib2.0-dev, bluepy, paho-mqtt:
 ```bash
 $ sudo apt-get install python3-pip libglib2.0-dev
 
-$ sudo pip3 install bluepy
+$ sudo pip3 install bluepy paho-mqtt python-dotenv
 ```
 
 Nato poženemo program:
