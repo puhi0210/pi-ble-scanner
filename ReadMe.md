@@ -19,6 +19,11 @@ $ git clone https://github.com/puhi0210/pi-ble-scanner.git
 
 $ cd pi-ble-scanner
 ```
+Skopirati je potrebno datoteko .env in nastaviti vrednosti spremenljivk:
+```bash
+$ cp template.env .env
+```
+
 
 Namestimo orodje pip, libglib2.0-dev in bluepy:
 ```bash

@@ -41,6 +41,7 @@ for dev in devices:
                 print("  %s = %s" % (desc, value))
         print("\n")
 
+print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
 
 devicesNearBy = []
