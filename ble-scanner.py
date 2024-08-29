@@ -3,6 +3,7 @@ from bluepy.btle import Scanner, DefaultDelegate
 # Maximalni RSSI za določanje bližine neprave
 minRSSI = -70
 
+# Class za skeniranje
 class ScanDelegate(DefaultDelegate):
     def __init__(self):
         DefaultDelegate.__init__(self)
@@ -13,12 +14,17 @@ class ScanDelegate(DefaultDelegate):
         elif isNewData:
             print("Sprejeti novi podatki iz", dev.addr)
 
-# Initialize the scanner
+# Inicializacija skenerja
 scanner = Scanner().withDelegate(ScanDelegate())
 
-# Scan for devices for 10 seconds
+# Skeniraj naprave Bluetooth 10 s
 devices = scanner.scan(10.0)
 
+st_naprav = len(devices)
+
+
+
+# Izpis
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 print("Skeniranje končano.")
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")

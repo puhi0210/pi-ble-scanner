@@ -10,7 +10,7 @@ import os
 def message_handling(client, userdata, msg):
     print(f"{msg.topic}: {msg.payload.decode()}")
 
-# uvoz spremenljivk
+# Uvoz spremenljivk
 load_dotenv('.env')
 broker_address: str = os.getenv('BROKER_ADDR')
 broker_port: int = int(os.getenv('BROKER_PORT'))
