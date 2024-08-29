@@ -13,14 +13,13 @@ import time
 
 # MQTT Publish QoS
 Pub_QoS = 1
-# Publish topic
-Pub_Topic = "puhi0210/test_topic"
 
 # Naloži okoljske spremenljivke
 load_dotenv('.env')
 broker_address: str = os.getenv('BROKER_ADDR')
 broker_port: int = int(os.getenv('BROKER_PORT'))
 broker_keepalive: int = int(os.getenv('BROKER_KA'))
+Pub_Topic: str = os.getenv('PUB_TOPIC')
 
 print(f"Broker ADDRESS: {broker_address}")
 print(f"Broker PORT: {broker_port}")

@@ -9,9 +9,6 @@ from dotenv import load_dotenv
 import os
 
 
-# Publish topic
-Sub_Topic = "puhi0210/#"
-
 def message_handling(client, userdata, msg):
     print(f"{msg.topic}: {msg.payload.decode()}")
 
@@ -20,6 +17,7 @@ load_dotenv('.env')
 broker_address: str = os.getenv('BROKER_ADDR')
 broker_port: int = int(os.getenv('BROKER_PORT'))
 broker_keepalive: int = int(os.getenv('BROKER_KA'))
+Sub_Topic: str = os.getenv('SUB_TOPIC')
 
 print(f"Broker ADDRESS: {broker_address}")
 print(f"Broker PORT: {broker_port}")
