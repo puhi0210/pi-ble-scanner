@@ -1,6 +1,14 @@
 # Knjižnice za Bluetooth scanner
 from bluepy.btle import Scanner, DefaultDelegate
 
+# Knjižnica za MQTT
+import sys
+import paho.mqtt.client as paho
+# Knjižnice za okolske spremenljivke
+from dotenv import load_dotenv
+import os
+
+
 # Maximalni RSSI za določanje bližine neprave
 minRSSI = -70
 

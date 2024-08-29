@@ -1,8 +1,8 @@
 
 # Testni program za sprejemanje MQTT sporočil iz brokerja
 
-import sys
 # Knjižnica za MQTT
+import sys
 import paho.mqtt.client as paho
 # Knjižnice za okolske spremenljivke
 from dotenv import load_dotenv
