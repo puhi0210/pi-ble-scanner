@@ -53,8 +53,11 @@ client = paho.Client()
 
 # Povezava na MQTT broker
 if client.connect(broker_address, broker_port, broker_keepalive) != 0:
-    print("Couldn't connect to the mqtt broker")
+    print("Ni se bilo mogoče povezati na broker!")
     sys.exit(1)
+else:
+    print("Povezava z brokerjem vzpostavljena")
+   
 
 # Tvorba odgovora
 result = "Št naprav: " + str(st_naprav)
