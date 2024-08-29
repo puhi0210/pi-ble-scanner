@@ -62,7 +62,7 @@ else:
    
 
 # Tvorba odgovora
-result = "Št naprav: " + str(st_naprav)
+result = "Št BLE naprav: " + str(st_naprav)
 
 # Objava na MQTT broker
 client.publish(Pub_Topic, result, Pub_QoS)
