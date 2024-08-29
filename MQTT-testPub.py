@@ -10,6 +10,8 @@ import os
 # Za izpis časa
 import time
 
+Pub_QoS = 1
+
 load_dotenv('.env')
 
 broker_address: str = os.getenv('BROKER_ADDR')
@@ -29,5 +31,5 @@ trenutni_cas = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 result = "Paho mqtt deluje pravilno. Trenutni čas: " + trenutni_cas
 
-client.publish("puhi0210/test_topic", result, 1)
+client.publish("puhi0210/test_topic", result, Pub_QoS)
 client.disconnect()
