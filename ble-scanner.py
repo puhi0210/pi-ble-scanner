@@ -1,3 +1,4 @@
+# Knjižnice za Bluetooth scanner
 from bluepy.btle import Scanner, DefaultDelegate
 
 # Maximalni RSSI za določanje bližine neprave
@@ -19,7 +20,7 @@ scanner = Scanner().withDelegate(ScanDelegate())
 
 # Skeniraj naprave Bluetooth 10 s
 devices = scanner.scan(10.0)
-
+# Število naprav
 st_naprav = len(devices)
 
 
@@ -49,7 +50,7 @@ for dev in devices:
 
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
-
+# Preverjanje bližine naprav glede na moč signala
 devicesNearBy = []
 
 for dev in devices:
