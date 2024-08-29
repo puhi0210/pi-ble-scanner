@@ -10,8 +10,6 @@ import os
 
 # MQTT Publish QoS
 Pub_QoS = 1
-# Publish topic
-Pub_Topic = "puhi0210/BLE-scanner"
 
 # Maximalni RSSI za določanje bližine neprave
 minRSSI = -70
