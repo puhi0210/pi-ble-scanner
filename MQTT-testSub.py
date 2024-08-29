@@ -10,7 +10,7 @@ import os
 
 
 # Publish topic
-Sub_Topic = "puhi0210"
+Sub_Topic = "puhi0210/#"
 
 def message_handling(client, userdata, msg):
     print(f"{msg.topic}: {msg.payload.decode()}")
