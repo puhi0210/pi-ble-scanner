@@ -45,6 +45,8 @@ scanner = Scanner().withDelegate(ScanDelegate())
 
 # Skeniraj naprave Bluetooth 10 s
 devices = scanner.scan(10.0)
+print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+
 # Število naprav
 st_naprav = len(devices)
 
@@ -53,10 +55,10 @@ client = paho.Client()
 
 # Povezava na MQTT broker
 if client.connect(broker_address, broker_port, broker_keepalive) != 0:
-    print("Ni se bilo mogoče povezati na broker!")
+    print(f"Ni se bilo mogoče povezati na broker!")
     sys.exit(1)
 else:
-    print("Povezava z brokerjem vzpostavljena")
+    print(f"Povezava z brokerjem vzpostavljena")
    
 
 # Tvorba odgovora

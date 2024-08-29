@@ -14,7 +14,8 @@ import time
 # MQTT Publish QoS
 Pub_QoS = 1
 # Publish topic
-Pub_Topic = "puhi0210/test_topic"
+#Pub_Topic = "puhi0210/test_topic"
+Pub_Topic = "puhi0210/BLE-scanner"
 
 # Naloži okoljske spremenljivke
 load_dotenv('.env')
