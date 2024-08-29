@@ -1,3 +1,6 @@
+
+# Testni program za preverjanje povezave z MQTT brokerjem
+
 import sys
 import paho.mqtt.client as paho
 

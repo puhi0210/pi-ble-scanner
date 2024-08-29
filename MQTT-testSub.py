@@ -1,3 +1,6 @@
+
+# Testni program za sprejemanje MQTT sporočil iz brokerja
+
 import sys
 import paho.mqtt.client as paho
 
@@ -12,6 +15,9 @@ load_dotenv('.env')
 broker_address: str = os.getenv('BROKER_ADDR')
 broker_port: int = int(os.getenv('BROKER_PORT'))
 broker_keepalive: int = int(os.getenv('BROKER_KA'))
+
+print(f"Broker ADDRESS: {broker_address}")
+print(f"Broker PORT: {broker_port}")
 
 
 client = paho.Client()
