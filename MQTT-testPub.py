@@ -27,7 +27,7 @@ if client.connect(broker_address, broker_port, broker_keepalive) != 0:
 
 trenutni_cas = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
-result = "Paho mqtt client works fine. Current time is: " + trenutni_cas
+result = "Paho mqtt deluje pravilno. Trenutni čas: " + trenutni_cas
 
 client.publish("puhi0210/test_topic", result, 1)
 client.disconnect()
