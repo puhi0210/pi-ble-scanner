@@ -8,6 +8,10 @@ import paho.mqtt.client as paho
 from dotenv import load_dotenv
 import os
 
+
+# Publish topic
+Sub_Topic = "puhi0210"
+
 def message_handling(client, userdata, msg):
     print(f"{msg.topic}: {msg.payload.decode()}")
 
@@ -32,7 +36,7 @@ if client.connect(broker_address, broker_port, broker_keepalive) != 0:
     sys.exit(1)
 
 # Naročanje na topic
-client.subscribe("puhi0210/test_topic")
+client.subscribe(Sub_Topic)
 
 # Prekinitev programa
 try:
