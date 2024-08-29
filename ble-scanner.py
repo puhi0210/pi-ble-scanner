@@ -8,9 +8,26 @@ import paho.mqtt.client as paho
 from dotenv import load_dotenv
 import os
 
+# MQTT Publish QoS
+Pub_QoS = 1
+# Publish topic
+Pub_Topic = "puhi0210/BLE-scanner"
 
 # Maximalni RSSI za določanje bližine neprave
 minRSSI = -70
+
+
+# Naloži okoljske spremenljivke
+load_dotenv('.env')
+broker_address: str = os.getenv('BROKER_ADDR')
+broker_port: int = int(os.getenv('BROKER_PORT'))
+broker_keepalive: int = int(os.getenv('BROKER_KA'))
+print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+print("MQTT")
+print(f"Broker ADDRESS: {broker_address}")
+print(f"Broker PORT: {broker_port}")
+print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+
 
 # Class za skeniranje
 class ScanDelegate(DefaultDelegate):
@@ -31,6 +48,20 @@ devices = scanner.scan(10.0)
 # Število naprav
 st_naprav = len(devices)
 
+# Inicializacija MQTT klienta
+client = paho.Client()
+
+# Povezava na MQTT broker
+if client.connect(broker_address, broker_port, broker_keepalive) != 0:
+    print("Couldn't connect to the mqtt broker")
+    sys.exit(1)
+
+# Tvorba odgovora
+result = "Št naprav: " + str(st_naprav)
+
+# Objava na MQTT broker
+client.publish(Pub_Topic, result, Pub_QoS)
+client.disconnect()
 
 
 # Izpis
