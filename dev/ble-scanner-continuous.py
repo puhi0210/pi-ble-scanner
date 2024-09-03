@@ -63,6 +63,7 @@ try:
         print(f"Število zaznanih naprav:", len(devices))
         print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
+        devices = []
         # Počakaj pred ponovnim skeniranjem
         t = scan_delay
         while t: 
