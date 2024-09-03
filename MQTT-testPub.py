@@ -19,7 +19,7 @@ load_dotenv('.env')
 broker_address: str = os.getenv('BROKER_ADDR')
 broker_port: int = int(os.getenv('BROKER_PORT'))
 broker_keepalive: int = int(os.getenv('BROKER_KA'))
-Pub_Topic: str = os.getenv('PUB_TOPIC')
+pub_topic: str = os.getenv('PUB_TOPIC')
 
 print(f"Broker ADDRESS: {broker_address}")
 print(f"Broker PORT: {broker_port}")
@@ -39,5 +39,5 @@ trenutni_cas = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 result = "Paho mqtt deluje pravilno. Trenutni čas: " + trenutni_cas
 
 # Objava na MQTT broker
-client.publish(Pub_Topic, result, Pub_QoS)
+client.publish(pub_topic, result, Pub_QoS)
 client.disconnect()

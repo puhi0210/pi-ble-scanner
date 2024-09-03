@@ -17,7 +17,7 @@ load_dotenv('.env')
 broker_address: str = os.getenv('BROKER_ADDR')
 broker_port: int = int(os.getenv('BROKER_PORT'))
 broker_keepalive: int = int(os.getenv('BROKER_KA'))
-Sub_Topic: str = os.getenv('SUB_TOPIC')
+sub_topic: str = os.getenv('SUB_TOPIC')
 
 print(f"Broker ADDRESS: {broker_address}")
 print(f"Broker PORT: {broker_port}")
@@ -34,7 +34,7 @@ if client.connect(broker_address, broker_port, broker_keepalive) != 0:
     sys.exit(1)
 
 # Naročanje na topic
-client.subscribe(Sub_Topic)
+client.subscribe(sub_topic)
 
 # Prekinitev programa
 try:
