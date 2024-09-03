@@ -63,9 +63,9 @@ try:
         time.sleep(scan_delay)
 
 except KeyboardInterrupt:
-    print(f"Prekinjeno s strani uporabnika. Zapiranje...")
+    print(f"\nPrekinjeno s strani uporabnika. Zapiranje...")
     
 finally:
     #client.disconnect()
     #print("MQTT klient odklopljen.")
-    print(f"Zaključek programa\n")
+    print(f"\nZaključek programa\n")
