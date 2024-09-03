@@ -10,10 +10,10 @@ import os
 import time
 
 # Čas skeniranja naprav v sekundah
-scan_time=120
+scan_time=10
 
 # Čas med posameznimi skeni v sekundah
-scan_delay=10
+scan_delay=120
 
 '''
 # MQTT Publish QoS
