@@ -25,6 +25,7 @@ pub_topic = topic_prefix + "/BLE-scanner/testTopic"
 
 print(f"Broker ADDRESS: {broker_address}")
 print(f"Broker PORT: {broker_port}")
+print(f"Publish topic: {pub_topic}\n")
 
 # Inicializacija MQTT klienta
 client = paho.Client()

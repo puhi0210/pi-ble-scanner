@@ -29,6 +29,7 @@ print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 print("MQTT")
 print(f"Broker ADDRESS: {broker_address}")
 print(f"Broker PORT: {broker_port}")
+print(f"Publish topic: {pub_topic}\n")
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
 
