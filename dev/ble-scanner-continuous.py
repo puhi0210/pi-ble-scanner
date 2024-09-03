@@ -65,13 +65,13 @@ try:
         print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
         # Počakaj pred ponovnim skeniranjem
-        time.sleep(scan_delay)
-
         t = scan_delay
         while t: 
-            print("Naslednji scan čez ", t, " sekund.", end="\r") 
+            print("Naslednji scan čez", t, "sekund.   ", end="\r") 
             time.sleep(1) 
             t -= 1
+        
+        print(f"                                                 ", end="\r")
       
 
 except KeyboardInterrupt:
@@ -80,5 +80,5 @@ except KeyboardInterrupt:
 finally:
     #client.disconnect()
     #print("MQTT klient odklopljen.")
-    print(f"\nZaključek programa\n")
+    print(f"\nZaključek programa.\n")
 
