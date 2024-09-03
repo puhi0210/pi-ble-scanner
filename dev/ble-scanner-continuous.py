@@ -67,6 +67,13 @@ try:
         # Počakaj pred ponovnim skeniranjem
         time.sleep(scan_delay)
 
+        t = scan_delay
+        while t: 
+            print("Naslednji scan čez ", t, " sekund.", end="\r") 
+            time.sleep(1) 
+            t -= 1
+      
+
 except KeyboardInterrupt:
     print(f"\nPrekinjeno s strani uporabnika. Zapiranje...")
     
