@@ -79,7 +79,7 @@ try:
 
         # Objava na MQTT broker
         client.publish(pub_topic, result, Pub_QoS)
-        print(f"Podatki objavljeni na MQTT broker.\n")
+        print(f"\nPodatki objavljeni na MQTT broker.\n")
 
         print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
