@@ -17,7 +17,9 @@ load_dotenv('.env')
 broker_address: str = os.getenv('BROKER_ADDR')
 broker_port: int = int(os.getenv('BROKER_PORT'))
 broker_keepalive: int = int(os.getenv('BROKER_KA'))
-sub_topic: str = os.getenv('SUB_TOPIC')
+topic_prefix: str = os.getenv('TOPIC_PRFX')
+
+sub_topic = topic_prefix + "/BLE-scanner/#"
 
 print(f"Broker ADDRESS: {broker_address}")
 print(f"Broker PORT: {broker_port}")
