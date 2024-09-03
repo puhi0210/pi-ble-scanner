@@ -57,7 +57,7 @@ try:
         print(f"Pričetek skeniranja.\n")
         # Skeniranje naprav Bluetooth
         devices = scanner.scan(scan_time)
-        print(f"                                        \n", end="\r")
+        print(f"                                                 ", end="\r")
         print(f"Konec skeniranja.\n")
                 
         print(f"Število zaznanih naprav:", len(devices))
