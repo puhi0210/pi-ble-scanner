@@ -95,7 +95,7 @@ try:
       
 
 except KeyboardInterrupt:
-    print(f"\nPrekinjeno s strani uporabnika. Zapiranje...")
+    print(f"\n\nPrekinjeno s strani uporabnika. Zapiranje...")
     
 finally:
     client.disconnect()
