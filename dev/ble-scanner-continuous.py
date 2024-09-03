@@ -54,13 +54,13 @@ print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
 try:
     while True:
-        print(f"Pričetek skeniranja\n")
+        print(f"Pričetek skeniranja.\n")
         # Skeniranje naprav Bluetooth
         devices = scanner.scan(scan_time)
         print(f"                                        \n", end="\r")
         print(f"Konec skeniranja.\n")
                 
-        print("Število zaznanih naprav:", len(devices), "\n")
+        print(f"Število zaznanih naprav:", len(devices))
 
         print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
