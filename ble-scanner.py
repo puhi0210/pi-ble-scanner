@@ -11,6 +11,7 @@ import os
 # MQTT Publish QoS
 Pub_QoS = 1
 
+
 # Maximalni RSSI za določanje bližine neprave
 minRSSI = -70
 
