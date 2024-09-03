@@ -51,11 +51,12 @@ class ScanDelegate(DefaultDelegate):
 scanner = Scanner().withDelegate(ScanDelegate())'''
 
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+# Inicializacija skenerja
+scanner = Scanner().withDelegate(ScanDelegate())
 
 try:
     while True:                
-        # Inicializacija skenerja
-        scanner = Scanner().withDelegate(ScanDelegate())
+       
         print(f"Pričetek skeniranja.\n")
         # Skeniranje naprav Bluetooth
         devices = scanner.scan(scan_time)
