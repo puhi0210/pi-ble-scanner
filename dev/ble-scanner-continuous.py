@@ -61,7 +61,6 @@ try:
         print(f"Konec skeniranja.\n")
                 
         print(f"Število zaznanih naprav:", len(devices))
-        devices = []
         print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
         # Počakaj pred ponovnim skeniranjem
