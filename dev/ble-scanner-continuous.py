@@ -13,7 +13,7 @@ import time
 scan_time=5
 
 # Čas med posameznimi skeni v sekundah
-scan_delay=120
+scan_delay=60
 
 '''
 # MQTT Publish QoS
