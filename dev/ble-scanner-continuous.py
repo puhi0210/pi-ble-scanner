@@ -1,5 +1,6 @@
 # Knjižnice za Bluetooth scanner
 from bluepy.btle import Scanner, DefaultDelegate
+
 # Knjižnica za MQTT
 import sys
 import paho.mqtt.client as paho
