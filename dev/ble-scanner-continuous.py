@@ -47,13 +47,15 @@ class ScanDelegate(DefaultDelegate):
         elif isNewData:
             print("Sprejeti novi podatki iz", dev.addr, "               ", end="\r")
 
-# Inicializacija skenerja
-scanner = Scanner().withDelegate(ScanDelegate())
+'''# Inicializacija skenerja
+scanner = Scanner().withDelegate(ScanDelegate())'''
 
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
 try:
-    while True:
+    while True:                
+        # Inicializacija skenerja
+        scanner = Scanner().withDelegate(ScanDelegate())
         print(f"Pričetek skeniranja.\n")
         # Skeniranje naprav Bluetooth
         devices = scanner.scan(scan_time)
