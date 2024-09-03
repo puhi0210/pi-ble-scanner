@@ -50,14 +50,18 @@ class ScanDelegate(DefaultDelegate):
 # Inicializacija skenerja
 scanner = Scanner().withDelegate(ScanDelegate())
 
+print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+
 try:
     while True:
+        print(f"Pričetek skeniranja\n")
         # Skeniranje naprav Bluetooth
         devices = scanner.scan(scan_time)
-        print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
-
-        
+        print(f"Konec skeniranja.\n", end="\r")
+                
         print("Število zaznanih naprav:", len(devices), "\n")
+
+        print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
         # Počakaj pred ponovnim skeniranjem
         time.sleep(scan_delay)
