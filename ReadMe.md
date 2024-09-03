@@ -21,7 +21,9 @@ $ cd pi-ble-scanner
 ```
 Skopirati je potrebno datoteko .env in nastaviti vrednosti spremenljivk:
 ```bash
-$ cp template.env .env
+$ sudo cp template.env .env
+
+$ sudo nano .env
 ```
 
 
