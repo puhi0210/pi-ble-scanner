@@ -23,6 +23,7 @@ sub_topic = topic_prefix + "/BLE-scanner/#"
 
 print(f"Broker ADDRESS: {broker_address}")
 print(f"Broker PORT: {broker_port}")
+print(f"Subscribe topic: {sub_topic}\n")
 
 
 # Inicializacija MQTT klienta
