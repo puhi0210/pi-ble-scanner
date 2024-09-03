@@ -1,13 +1,13 @@
 # Knjižnice za Bluetooth scanner
 from bluepy.btle import Scanner, DefaultDelegate
-
 # Knjižnica za MQTT
 import sys
 import paho.mqtt.client as paho
 # Knjižnice za okolske spremenljivke
 from dotenv import load_dotenv
 import os
-# Knjižnica za 
+# Knjižnica za zakasnitve
+import time
 
 # Čas skeniranja naprav v sekundah
 scan_time=10
@@ -61,3 +61,11 @@ try:
 
         # Počakaj pred ponovnim skeniranjem
         time.sleep(scan_delay)
+
+except KeyboardInterrupt:
+    print(f"Prekinjeno s strani uporabnika. Zapiranje...")
+    
+finally:
+    #client.disconnect()
+    #print("MQTT klient odklopljen.")
+    print(f"Zaključek programa\n")
