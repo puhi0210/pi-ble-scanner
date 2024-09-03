@@ -73,4 +73,3 @@ finally:
     #client.disconnect()
     #print("MQTT klient odklopljen.")
     print(f"\nZaključek programa\n")
-    
