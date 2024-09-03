@@ -57,7 +57,8 @@ try:
         print(f"Pričetek skeniranja\n")
         # Skeniranje naprav Bluetooth
         devices = scanner.scan(scan_time)
-        print(f"Konec skeniranja.\n", end="\r")
+        print(f"                                        \n", end="\r")
+        print(f"Konec skeniranja.\n")
                 
         print("Število zaznanih naprav:", len(devices), "\n")
 
@@ -73,3 +74,4 @@ finally:
     #client.disconnect()
     #print("MQTT klient odklopljen.")
     print(f"\nZaključek programa\n")
+
