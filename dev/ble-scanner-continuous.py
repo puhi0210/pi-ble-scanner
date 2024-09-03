@@ -15,7 +15,6 @@ scan_time=5
 # Čas med posameznimi skeni v sekundah
 scan_delay=60
 
-'''
 # MQTT Publish QoS
 Pub_QoS = 1
 
@@ -35,7 +34,7 @@ print(f"Broker ADDRESS: {broker_address}")
 print(f"Broker PORT: {broker_port}")
 print(f"Publish topic: {pub_topic}\n")
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
-'''
+
 # Class za skeniranje
 class ScanDelegate(DefaultDelegate):
     def __init__(self):
@@ -47,10 +46,19 @@ class ScanDelegate(DefaultDelegate):
         elif isNewData:
             print("Sprejeti novi podatki iz", dev.addr, "               ", end="\r")
 
-'''# Inicializacija skenerja
-scanner = Scanner().withDelegate(ScanDelegate())'''
-
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+
+# Inicializacija MQTT klienta
+client = paho.Client()
+
+# Povezava na MQTT broker
+if client.connect(broker_address, broker_port, broker_keepalive) != 0:
+    print(f"Ni se bilo mogoče povezati na broker!\n")
+    sys.exit(1)
+else:
+    print(f"Povezava z brokerjem vzpostavljena\n")
+
+
 # Inicializacija skenerja
 scanner = Scanner().withDelegate(ScanDelegate())
 
@@ -62,8 +70,17 @@ try:
         devices = scanner.scan(scan_time)
         print(f"                                                 ", end="\r")
         print(f"Konec skeniranja.\n")
-                
-        print(f"Število zaznanih naprav:", len(devices))
+        # Število naprav
+        st_naprav = len(devices)   
+        print(f"Število zaznanih naprav:", st_naprav)
+        
+        # Tvorba odgovora
+        result = "Št. BLE naprav: " + str(st_naprav)
+
+        # Objava na MQTT broker
+        client.publish(pub_topic, result, Pub_QoS)
+        print(f"Podatki objavljeni na MQTT broker.\n")
+
         print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
         devices = []
@@ -81,7 +98,7 @@ except KeyboardInterrupt:
     print(f"\nPrekinjeno s strani uporabnika. Zapiranje...")
     
 finally:
-    #client.disconnect()
-    #print("MQTT klient odklopljen.")
+    client.disconnect()
+    print("\nMQTT klient odklopljen.")
     print(f"\nZaključek programa.\n")
 
