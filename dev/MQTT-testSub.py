@@ -19,8 +19,7 @@ broker_port: int = int(os.getenv('BROKER_PORT'))
 broker_keepalive: int = int(os.getenv('BROKER_KA'))
 topic_prefix: str = os.getenv('TOPIC_PRFX')
 
-#sub_topic = topic_prefix + "/BLE-scanner/#"
-sub_topic = "puhi0210/#"
+sub_topic = topic_prefix + "/BLE-scanner/#"
 
 print(f"Broker ADDRESS: {broker_address}")
 print(f"Broker PORT: {broker_port}")
