@@ -21,6 +21,7 @@ load_dotenv('.env')
 broker_address: str = os.getenv('BROKER_ADDR')
 broker_port: int = int(os.getenv('BROKER_PORT'))
 broker_keepalive: int = int(os.getenv('BROKER_KA'))
+pub_topic: str = os.getenv('PUB_TOPIC')
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 print("MQTT")
 print(f"Broker ADDRESS: {broker_address}")
@@ -64,7 +65,7 @@ else:
 result = "Št. BLE naprav: " + str(st_naprav)
 
 # Objava na MQTT broker
-client.publish(Pub_Topic, result, Pub_QoS)
+client.publish(pub_topic, result, Pub_QoS)
 client.disconnect()
 
 
