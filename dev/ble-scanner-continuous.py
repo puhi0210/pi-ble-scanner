@@ -43,9 +43,9 @@ class ScanDelegate(DefaultDelegate):
 
     def handleDiscovery(self, dev, isNewDev, isNewData):
         if isNewDev:
-            print("Najdena naprava", dev.addr)
+            print("Najdena naprava", dev.addr, end="\r")
         elif isNewData:
-            print("Sprejeti novi podatki iz", dev.addr)
+            print("Sprejeti novi podatki iz", dev.addr, end="\r")
 
 # Inicializacija skenerja
 scanner = Scanner().withDelegate(ScanDelegate())
